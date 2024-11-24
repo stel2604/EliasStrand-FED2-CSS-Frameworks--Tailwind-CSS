@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind-genererte CSS -->
+    <link href="./css/style.css" rel="stylesheet" />
+
+    <!-- Kobling til kompilert SASS-fil -->
+    <link href="./output.css" rel="stylesheet" />
+
+    <title>Autentisering</title>
+  </head>
+  <body
+    class="bg-cover bg-center min-h-screen"
+    style="background-image: url('/images/fjell.jpg')"
+  >
+    <!-- Navbar -->
+    <header class="bg-white shadow-lg">
+      <nav class="container mx-auto">
+        <div class="flex justify-between">
+          <a href="/" class="flex items-center py-4 px-2">
+            <span class="text-lg font-bold text-gray-500">Logo</span>
+          </a>
+          <div class="hidden md:flex items-center space-x-1">
+            <a
+              href="#"
+              class="py-4 px-2 text-green-500 font-semibold border-b-4 border-green-500"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+              >Services</a
+            >
+            <a
+              href="#"
+              class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+              >About</a
+            >
+            <a
+              href="#"
+              class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+              >Contact Us</a
+            >
+          </div>
+          <div class="hidden md:flex items-center space-x-3">
+            <a
+              href="#"
+              class="py-4 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300"
+              >Log In</a
+            >
+            <a
+              href="#"
+              class="py-4 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300"
+              >Sign Up</a
+            >
+          </div>
+          <div class="flex md:hidden items-center">
+            <button class="" id="menu-btn">
+              <svg
+                class="w-6 h-6 text-gray-500 hover:text-green-500"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Logg inn form sentralisert -->
+    <main class="flex items-center justify-center flex-grow min-h-screen">
+      <div class="bg-white p-6 rounded-lg shadow-md w-96 z-10">
+        <h1 class="text-xl font-semibold mb-4">Logg inn</h1>
+        <form action="/profile/index.html" method="GET">
+          <label class="block text-gray-700 mb-2" for="username"
+            >Brukernavn:</label
+          >
+          <input
+            class="border border-gray-300 rounded w-full py-2 px-3 mb-4 focus:outline-none focus:ring-2 focus:ring-primary"
+            type="text"
+            id="username"
+            name="username"
+            placeholder="elias@example.com"
+            required
+          />
+
+          <label class="block text-gray-700 mb-2" for="password"
+            >Passord:</label
+          >
+          <input
+            class="border border-gray-300 rounded w-full py-2 px-3 mb-4 focus:outline-none focus:ring-2 focus:ring-primary"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+            minlength="8"
+          />
+
+          <button
+            class="auth-button w-full bg-blue-500 text-white rounded py-2 px-4 hover:bg-blue-600"
+            type="submit"
+          >
+            Logg inn
+          </button>
+        </form>
+      </div>
+    </main>
+    <footer class="bg-white dark:bg-gray-900 py-5">
+      <p class="container mx-auto text-center text-gray-500 dark:text-gray-300">
+        Copyright &copy; 2024
+      </p>
+    </footer>
+  </body>
+</html>
