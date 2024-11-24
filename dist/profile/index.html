@@ -1,78 +1,156 @@
 <!DOCTYPE html>
 <html lang="no">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/dist/output.css" rel="stylesheet"> <!-- Link til den genererte CSS-filen -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <!-- Link til den genererte CSS-filen -->
     <link href="/dist/css/input.css" rel="stylesheet" />
     <title>Profil</title>
-</head>
-<body class="bg-gray-100">
+  </head>
+  <body class="bg-gray-100">
     <div class="container mx-auto p-6">
-        <h3 class="text-2xl font-semibold mb-2">Din profil:</h3>
-        <div class="bg-white p-6 rounded-lg shadow-md mb-4 flex items-center profile-container">
-            <img src="../images/profile.jpg" alt="Profilbilde" class="rounded-full h-32 w-32 object-cover shadow-lg" />
-            <div class="ml-4">
-                <h2 class="font-semibold text-xl">
-                    Navn: <span id="username" style="font-size: 12px; color: rgb(255, 0, 0);">Elias Strand</span>
-                </h2>
-                <p class="font-semibold text-xl">
-                    Sted: <span style="font-size: 12px; color: red;">Oslo, Norge</span>
-                </p>
-                <p class="font-semibold text-xl">Bio: <span style="font-size: 12px; color: red;">Reisende og eventyrer.</span></p>
-                <p class="font-semibold text-xl">Sitat: <span style="font-size: 12px; color: red;">Elsker å dele opplevelser!</span></p>
-            </div>
+      <h3 class="text-2xl font-semibold mb-2">Din profil:</h3>
+      <div
+        class="bg-white p-6 rounded-lg shadow-md mb-4 flex items-center profile-container"
+      >
+        <img
+          src="../images/profile.jpg"
+          alt="Profilbilde"
+          class="rounded-full h-32 w-32 object-cover shadow-lg"
+        />
+        <div class="ml-4">
+          <h2 class="font-semibold text-xl">
+            Navn:
+            <span id="username" style="font-size: 12px; color: rgb(255, 0, 0)"
+              >Elias Strand</span
+            >
+          </h2>
+          <p class="font-semibold text-xl">
+            Sted: <span style="font-size: 12px; color: red">Oslo, Norge</span>
+          </p>
+          <p class="font-semibold text-xl">
+            Bio:
+            <span style="font-size: 12px; color: red"
+              >Reisende og eventyrer.</span
+            >
+          </p>
+          <p class="font-semibold text-xl">
+            Sitat:
+            <span style="font-size: 12px; color: red"
+              >Elsker å dele opplevelser!</span
+            >
+          </p>
+        </div>
+      </div>
+
+      <!-- Dine innlegg seksjon (samme som før) -->
+      <h3 class="text-2xl font-semibold mb-2">Dine innlegg:</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Innlegg 1 -->
+        <div class="bg-white p-4 rounded-lg shadow-lg">
+          <img
+            src="/dist/images/Waterfall.jpg"
+            alt="Innlegg 1"
+            class="w-full h-48 object-cover rounded"
+          />
+          <h4 class="font-semibold mt-2">Vannfallet</h4>
+          <p class="text-gray-700">
+            Utforsker mektige fossefall i frodige omgivelser. Naturens kraft på
+            sitt beste.
+          </p>
+          <div class="flex justify-between items-center mt-2">
+            <button
+              class="bg-blue-500 text-white rounded py-1 px-3 hover:bg-blue-600"
+            >
+              Like
+            </button>
+            <span class="text-gray-500">10 kommentarer</span>
+          </div>
+          <div class="mt-2">
+            <textarea
+              class="border rounded w-full py-2 px-3 mb-2"
+              placeholder="Skriv en kommentar..."
+            ></textarea>
+            <button
+              class="bg-blue-500 text-white rounded py-1 px-3 hover:bg-blue-600"
+            >
+              Send kommentar
+            </button>
+          </div>
         </div>
 
-        <!-- Dine innlegg seksjon (samme som før) -->
-        <h3 class="text-2xl font-semibold mb-2">Dine innlegg:</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <!-- Innlegg 1 -->
-            <div class="bg-white p-4 rounded-lg shadow-lg">
-                <img src="../images/Waterfall.jpg" alt="Innlegg 1" class="w-full h-48 object-cover rounded" />
-                <h4 class="font-semibold mt-2">Vannfallet</h4>
-                <p class="text-gray-700">Utforsker mektige fossefall i frodige omgivelser. Naturens kraft på sitt beste.</p>
-                <div class="flex justify-between items-center mt-2">
-                    <button class="bg-blue-500 text-white rounded py-1 px-3 hover:bg-blue-600">Like</button>
-                    <span class="text-gray-500">10 kommentarer</span>
-                </div>
-                <div class="mt-2">
-                    <textarea class="border rounded w-full py-2 px-3 mb-2" placeholder="Skriv en kommentar..."></textarea>
-                    <button class="bg-blue-500 text-white rounded py-1 px-3 hover:bg-blue-600">Send kommentar</button>
-                </div>
-            </div>
-
-            <!-- Innlegg 2 -->
-            <div class="bg-white p-4 rounded-lg shadow-lg">
-                <img src="../images/Ocean.jpg" alt="Innlegg 2" class="w-full h-48 object-cover rounded" />
-                <h4 class="font-semibold mt-2">Solnedgang over havet</h4>
-                <p class="text-gray-700">Magisk solnedgang over havet, med en fargespekket himmel som speiler seg i vannet.</p>
-                <div class="flex justify-between items-center mt-2">
-                    <button class="bg-blue-500 text-white rounded py-1 px-3 hover:bg-blue-600">Like</button>
-                    <span class="text-gray-500">5 kommentarer</span>
-                </div>
-                <div class="mt-2">
-                    <textarea class="border rounded w-full py-2 px-3 mb-2" placeholder="Skriv en kommentar..."></textarea>
-                    <button class="bg-blue-500 text-white rounded py-1 px-3 hover:bg-blue-600">Send kommentar</button>
-                </div>
-            </div>
-
-            <!-- Innlegg 3 -->
-            <div class="bg-white p-4 rounded-lg shadow-lg">
-                <img src="../images/animals.jpg" alt="Innlegg 3" class="w-full h-48 object-cover rounded" />
-                <h4 class="font-semibold mt-2">Hjort i skogen</h4>
-                <p class="text-gray-700">Rolige øyeblikk i skogen med hjortefamilien. En påminnelse om naturens ro.</p>
-                <div class="flex justify-between items-center mt-2">
-                    <button class="bg-blue-500 text-white rounded py-1 px-3 hover:bg-blue-600">Like</button>
-                    <span class="text-gray-500">8 kommentarer</span>
-                </div>
-                <div class="mt-2">
-                    <textarea class="border rounded w-full py-2 px-3 mb-2" placeholder="Skriv en kommentar..."></textarea>
-                    <button class="bg-blue-500 text-white rounded py-1 px-3 hover:bg-blue-600">Send kommentar</button>
-                </div>
-            </div>
+        <!-- Innlegg 2 -->
+        <div class="bg-white p-4 rounded-lg shadow-lg">
+          <img
+            src="/dist/images/Ocean.jpg"
+            alt="Innlegg 2"
+            class="w-full h-48 object-cover rounded"
+          />
+          <h4 class="font-semibold mt-2">Solnedgang over havet</h4>
+          <p class="text-gray-700">
+            Magisk solnedgang over havet, med en fargespekket himmel som speiler
+            seg i vannet.
+          </p>
+          <div class="flex justify-between items-center mt-2">
+            <button
+              class="bg-blue-500 text-white rounded py-1 px-3 hover:bg-blue-600"
+            >
+              Like
+            </button>
+            <span class="text-gray-500">5 kommentarer</span>
+          </div>
+          <div class="mt-2">
+            <textarea
+              class="border rounded w-full py-2 px-3 mb-2"
+              placeholder="Skriv en kommentar..."
+            ></textarea>
+            <button
+              class="bg-blue-500 text-white rounded py-1 px-3 hover:bg-blue-600"
+            >
+              Send kommentar
+            </button>
+          </div>
         </div>
-        <button class="bg-blue-500 text-white rounded py-2 px-4 mt-4 transition duration-300 hover:bg-blue-600">Følg</button>
+
+        <!-- Innlegg 3 -->
+        <div class="bg-white p-4 rounded-lg shadow-lg">
+          <img
+            src="/dist/images/animals.jpg"
+            alt="Innlegg 3"
+            class="w-full h-48 object-cover rounded"
+          />
+          <h4 class="font-semibold mt-2">Hjort i skogen</h4>
+          <p class="text-gray-700">
+            Rolige øyeblikk i skogen med hjortefamilien. En påminnelse om
+            naturens ro.
+          </p>
+          <div class="flex justify-between items-center mt-2">
+            <button
+              class="bg-blue-500 text-white rounded py-1 px-3 hover:bg-blue-600"
+            >
+              Like
+            </button>
+            <span class="text-gray-500">8 kommentarer</span>
+          </div>
+          <div class="mt-2">
+            <textarea
+              class="border rounded w-full py-2 px-3 mb-2"
+              placeholder="Skriv en kommentar..."
+            ></textarea>
+            <button
+              class="bg-blue-500 text-white rounded py-1 px-3 hover:bg-blue-600"
+            >
+              Send kommentar
+            </button>
+          </div>
+        </div>
+      </div>
+      <button
+        class="bg-blue-500 text-white rounded py-2 px-4 mt-4 transition duration-300 hover:bg-blue-600"
+      >
+        Følg
+      </button>
     </div>
-</body>
+  </body>
 </html>
