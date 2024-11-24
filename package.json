@@ -1,10 +1,11 @@
 {
   "name": "css-frameworks--tailwind-css",
   "version": "1.0.0",
-  "description": "Frontend development project for a responsive social media application, built with Tailwind CSS and SASS. Includes authentication, a feed page, and a profile page",
+  "description": "Frontend development project for a responsive social media application.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss build css/input.css -o dist/output.css"
   },
   "keywords": [],
   "author": "",
